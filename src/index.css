@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Enterprise palette. Light = :root, dark = .dark (class toggled on <html>). */
+  :root {
+    --background: 210 40% 98%;          /* page #F8FAFC */
+    --surface: 0 0% 100%;               /* main content surface #FFFFFF */
+    --foreground: 222 47% 11%;          /* #0F172A */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;             /* #2563EB */
+    --primary-hover: 224 76% 48%;       /* #1D4ED8 */
+    --primary-foreground: 0 0% 100%;
+    --indigo: 243 75% 59%;              /* #4F46E5 */
+    --purple: 262 83% 58%;              /* #7C3AED */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;    /* #64748B */
+    --accent: 214 100% 97%;
+    --accent-foreground: 221 83% 53%;
+    --subtle: 214 100% 97%;             /* #EFF6FF */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --warning: 32 95% 44%;
+    --error: 0 72% 51%;
+    --border: 214 32% 91%;              /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
+
+    --navy: 222 47% 11%;
+    --navy-light: 217 33% 17%;
+    --super-dream: 263 70% 58%;
+    --dream: 221 83% 53%;
+    --standard: 142 72% 29%;
+    --regular: 32 95% 44%;
+    --expert: 0 72% 51%;
+    --advanced: 21 90% 48%;
+    --pro: 221 83% 53%;
+    --beginner: 142 72% 29%;
+
+    --sidebar-background: 210 40% 96%;  /* #F1F5F9 */
+    --sidebar-foreground: 215 25% 27%;
+    --sidebar-accent: 214 100% 97%;
+    --sidebar-accent-foreground: 221 83% 53%;
+    --sidebar-border: 214 32% 91%;
+    --cat-super-dream: 262 83% 58%;     /* #7C3AED */
+    --cat-dream: 221 83% 53%;           /* #2563EB */
+    --cat-standard: 142 76% 36%;        /* #16A34A */
+    --cat-regular: 32 95% 44%;          /* #D97706 */
+    --cat-all: 222 47% 11%;
+    --on-cat: 0 0% 100%;
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 223 49% 8%;           /* #0B1120 */
+    --surface: 221 39% 11%;             /* #111827 */
+    --foreground: 210 40% 96%;          /* #F1F5F9 */
+    --card: 221 38% 15%;                /* elevated #172033 */
+    --card-foreground: 210 40% 96%;
+    --primary: 213 94% 68%;             /* #60A5FA */
+    --primary-hover: 212 96% 78%;       /* #93C5FD */
+    --primary-foreground: 223 49% 8%;
+    --indigo: 234 89% 74%;              /* #818CF8 */
+    --purple: 255 92% 76%;              /* #A78BFA */
+    --secondary: 221 38% 15%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 221 38% 15%;
+    --muted-foreground: 215 20% 65%;    /* #94A3B8 */
+    --accent: 226 57% 21%;
+    --accent-foreground: 213 94% 68%;
+    --subtle: 226 57% 21%;              /* #172554 */
+    --destructive: 0 91% 71%;
+    --destructive-foreground: 223 49% 8%;
+    --success: 142 69% 58%;
+    --warning: 43 96% 56%;
+    --error: 0 91% 71%;
+    --border: 216 32% 22%;              /* #263449 */
+    --input: 216 32% 22%;
+    --ring: 213 94% 68%;
+
+    --sidebar-background: 222 47% 11%;  /* #0F172A */
+    --sidebar-foreground: 214 32% 85%;
+    --sidebar-accent: 226 57% 21%;
+    --sidebar-accent-foreground: 213 94% 68%;
+    --sidebar-border: 216 32% 22%;
+    --cat-super-dream: 255 92% 76%;     /* #A78BFA */
+    --cat-dream: 213 94% 68%;           /* #60A5FA */
+    --cat-standard: 142 69% 58%;        /* #4ADE80 */
+    --cat-regular: 43 96% 56%;          /* #FBBF24 */
+    --cat-all: 210 40% 96%;
+    --on-cat: 223 49% 8%;
+    color-scheme: dark;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-body antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+}
+
+@layer utilities {
+  .theme-transition { transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
