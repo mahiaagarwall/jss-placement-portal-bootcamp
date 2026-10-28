@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JSS University, Noida — Companies Research & Placement Analytics Portal
 
 Also known as the **JSS University, Noida Placement Intelligence Hub** (JSS NOIDA).
@@ -52,3 +53,6 @@ Paste `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` into `.env`, then `npm in
 - **Code:** `src/lib/supabaseClient.ts` (client; logs a clear console error if an env var is missing) and `src/lib/companyApi.ts` (`useCompanies`, `useCompanyProfile`, `useCompanySkills`).
 - Pages show a skeleton while loading and an error message with a Retry button if a request fails.
 - **Tests** run against an in-memory fake Supabase built from the seed (`src/test/fakeSupabase.ts`), including a check that only the five allowed tables are queried.
+=======
+# jss-placement-portal-bootcamp
+>>>>>>> origin/main
